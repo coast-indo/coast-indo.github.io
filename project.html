@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects - Gugum Gumbira</title>
+    <style>
+        /* --- Base Styles --- */
+        :root { 
+            --primary-color: #004b87; 
+            --text-color: #333333; 
+            --bg-color: #ffffff; 
+            --light-bg: #f4f7f9; 
+            --border-color: #e1e8ed; 
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+        }
+
+        h1, h2, h3 { color: var(--primary-color); margin-bottom: 0.5em; font-weight: 600; }
+        h2 { font-size: 1.8rem; margin-top: 2rem; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 0.2rem; }
+        p { margin-bottom: 1rem; }
+        
+        /* --- Navigation --- */
+        header { 
+            position: sticky; top: 0; 
+            background: rgba(255, 255, 255, 0.95); 
+            border-bottom: 1px solid var(--border-color); 
+            z-index: 100; padding: 1rem 0; 
+        }
+        
+        nav { 
+            display: flex; justify-content: center; gap: 1.5rem; 
+            max-width: 1100px; margin: 0 auto; flex-wrap: wrap;
+        }
+        
+        nav a { 
+            font-weight: 500; font-size: 0.9rem; text-transform: uppercase; 
+            letter-spacing: 1px; color: #555; text-decoration: none; 
+            transition: color 0.2s; 
+        }
+        
+        nav a:hover { color: var(--primary-color); }
+        
+        /* --- Layout --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; min-height: 70vh; }
+        
+        /* --- Project Cards --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: var(--primary-color);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: #555;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .tags { 
+            display: flex; flex-wrap: wrap; gap: 0.5rem; 
+            margin-top: auto;
+        }
+        
+        .tag { 
+            background: var(--light-bg); 
+            border: 1px solid var(--border-color); 
+            padding: 0.2rem 0.6rem; 
+            border-radius: 4px; 
+            font-size: 0.75rem; 
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .read-more {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+        
+        .read-more:hover { text-decoration: underline; }
+
+        footer { 
+            text-align: center; padding: 2rem; 
+            background: var(--light-bg); border-top: 1px solid var(--border-color); 
+            color: #666; font-size: 0.9rem; margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mission.html">Mission</a>
+            <a href="index.html#focus">What I Do</a>
+            <a href="index.html#background">Background</a>
+            <!-- Highlight Project link -->
+            <a href="projects.html" style="color: var(--primary-color); font-weight: bold;">Research Projects</a>
+            <a href="index.html#publications">Publications</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Research Projects</h2>
+        <p style="margin-top: 1rem;">A selection of my recent research projects, model developments, and global collaborations. <em>(You can replace this text with your own introduction).</em></p>
+
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3 class="project-title">Global Coastal Evolution Modelling</h3>
+                <p class="project-desc">Developing a unified planetary view of coastal evolution by coupling long-term shoreline models with global climate and sea-level rise data. This project aims to simulate how coastlines will change over the next century.</p>
+                <div class="tags">
+                    <span class="tag">ShorelineS</span>
+                    <span class="tag">Climate Change</span>
+                    <span class="tag">Global Scale</span>
+                </div>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3 class="project-title">Forecasting Hurricane Impacts</h3>
+                <p class="project-desc">Operational coastal erosion and flooding models for hurricane impact forecasting. This project integrates real-time weather data with morphodynamic models to predict storm surge and beach erosion along vulnerable coastlines.</p>
+                <div class="tags">
+                    <span class="tag">XBeach</span>
+                    <span class="tag">Storm Surge</span>
+                    <span class="tag">Early Warning</span>
+                </div>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3 class="project-title">Estuarine Sediment Dynamics</h3>
+                <p class="project-desc">Investigating the morphodynamic response of estuarine intertidal shoals to sea-level rise and changing sediment supplies. This research helps inform nature-based solutions and estuary management.</p>
+                <div class="tags">
+                    <span class="tag">Delft3D</span>
+                    <span class="tag">Morphodynamics</span>
+                    <span class="tag">Estuaries</span>
+                </div>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3 class="project-title">Nature-Based Coastal Protection</h3>
+                <p class="project-desc">Evaluating the effectiveness of mangroves, dunes, and coral reefs in reducing coastal erosion and flooding. The project uses physics-based models to quantify the protective services provided by natural ecosystems.</p>
+                <div class="tags">
+                    <span class="tag">Nature-Based Solutions</span>
+                    <span class="tag">Mangroves</span>
+                    <span class="tag">Dunes</span>
+                </div>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Gugum Gumbira. All rights reserved.</p>
+    </footer>
+</body>
+</html>
