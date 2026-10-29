@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gugum Gumbira - Coastal Modelling Specialist</title>
     <style>
-        /* --- Base Styles --- */
         :root {
-            --primary-color: #004b87; /* A professional deep blue */
+            --primary-color: #004b87;
             --text-color: #333333;
             --bg-color: #ffffff;
             --light-bg: #f4f7f9;
@@ -33,7 +32,6 @@
         a { color: var(--primary-color); text-decoration: none; transition: color 0.2s; }
         a:hover { color: #002d52; text-decoration: underline; }
 
-        /* --- Layout & Navigation --- */
         header {
             position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid var(--border-color); z-index: 100;
@@ -45,7 +43,6 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
         section { margin-bottom: 4rem; scroll-margin-top: 80px; }
 
-        /* --- Hero Section --- */
         .hero { padding: 5rem 0 3rem 0; background-color: var(--light-bg); border-bottom: 1px solid var(--border-color); }
         .hero-container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 3rem; }
         .hero-text { flex: 1; }
@@ -53,7 +50,6 @@
         .hero-text h2 { border: none; margin-top: 0; font-size: 1.5rem; color: #666; font-weight: 400; }
         .avatar { width: 150px; height: 150px; border-radius: 50%; background-color: #ddd; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999; border: 4px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
-        /* --- Components --- */
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; text-align: center; margin: 2rem 0; }
         .stat-item h3 { font-size: 2.5rem; margin-bottom: 0; color: var(--primary-color); }
         .stat-item p { color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
@@ -74,10 +70,8 @@
 </head>
 <body>
 
-    <!-- Sticky Navigation -->
     <header>
         <nav>
-            <!-- Added Home link, updated Mission to point to mission.html -->
             <a href="index.html">Home</a>
             <a href="mission.html">Mission</a>
             <a href="#focus">What I Do</a>
@@ -87,7 +81,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" style="margin-bottom:0;">
         <div class="hero-container">
             <div class="avatar">GG</div>
@@ -99,12 +92,10 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="container">
         
-        <!-- (Mission section has been removed from here) -->
+        <!-- Mission section is completely removed here -->
 
-        <!-- What I Do -->
         <section id="focus" style="background: var(--light-bg); padding: 2rem; border-radius: 8px;">
             <h2 style="border:none; margin-top:0;">What I do</h2>
             <h3 style="margin-top: 0.5rem;">Four areas of focus</h3>
@@ -136,12 +127,10 @@
             </div>
         </section>
 
-        <!-- Background & Track Record -->
         <section id="background">
             <h2>Background & Track Record</h2>
             <p>Decades of research, teaching and consultancy across the globe — the foundation behind my work.</p>
 
-            <!-- Stats -->
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>200+</h3>
@@ -161,7 +150,6 @@
                 </div>
             </div>
 
-            <!-- Professional Experience -->
             <h3 style="margin-top: 3rem;">Professional Experience</h3>
             
             <div class="job">
@@ -204,7 +192,6 @@
                 </ul>
             </div>
 
-            <!-- Key Qualifications -->
             <h3 style="margin-top: 2rem;">Key Qualifications</h3>
             <div class="tags">
                 <span class="tag">Coastal hydrodynamics & morphodynamics</span>
@@ -217,7 +204,6 @@
             </div>
         </section>
 
-        <!-- Publications -->
         <section id="publications">
             <h2>Selected Publications</h2>
             <div class="pub-list" style="margin-top: 1.5rem;">
@@ -235,11 +221,9 @@
         <p>Contact: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     </footer>
 
-    <!-- Updated Smooth Scrolling Script -->
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // Only run smooth scroll if the link starts with a '#'
                 if (this.getAttribute('href').startsWith('#')) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
