@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission - Gugum Gumbira</title>
     <style>
-        /* --- Base Styles --- */
+        /* --- Ocean Theme Colors --- */
         :root { 
-            --primary-color: #004b87; 
-            --text-color: #333333; 
-            --bg-color: #ffffff; 
-            --light-bg: #f4f7f9; 
-            --border-color: #e1e8ed; 
+            --primary-color: #005B96; 
+            --accent-color: #00A8E8;  
+            --text-color: #1A2F4C;    
+            --bg-color: #F0F8FF;      
+            --card-bg: #FFFFFF;       
+            --border-color: #B3E5FC;  
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,41 +22,32 @@
             line-height: 1.6; 
             color: var(--text-color); 
             background-color: var(--bg-color); 
+            background-image: linear-gradient(180deg, #E1F5FE 0%, #F0F8FF 100%);
         }
 
-        h1, h2, h3 { color: var(--primary-color); margin-bottom: 0.5em; font-weight: 600; }
-        h2 { font-size: 1.8rem; margin-top: 2rem; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 0.2rem; }
+        h1, h2, h3 { color: var(--primary-color); margin-bottom: 0.5em; font-weight: 700; }
+        h2 { font-size: 2rem; margin-top: 2rem; border-bottom: 3px solid var(--accent-color); display: inline-block; padding-bottom: 0.3rem; }
         p { margin-bottom: 1rem; }
         
-        /* --- Navigation --- */
         header { 
-            position: sticky; top: 0; 
-            background: rgba(255, 255, 255, 0.95); 
-            border-bottom: 1px solid var(--border-color); 
-            z-index: 100; padding: 1rem 0; 
+            position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); 
+            box-shadow: 0 2px 10px rgba(0, 91, 150, 0.1);
+            border-bottom: 2px solid var(--accent-color); z-index: 100; padding: 1rem 0; 
         }
+        nav { display: flex; justify-content: center; gap: 1.5rem; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+        nav a { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-color); text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: var(--accent-color); }
         
-        nav { 
-            display: flex; justify-content: center; gap: 2rem; 
-            max-width: 1000px; margin: 0 auto; 
-        }
-        
-        nav a { 
-            font-weight: 500; font-size: 0.95rem; text-transform: uppercase; 
-            letter-spacing: 1px; color: #555; text-decoration: none; 
-            transition: color 0.2s; 
-        }
-        
-        nav a:hover { color: var(--primary-color); }
-        
-        /* --- Layout --- */
         .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; min-height: 70vh; }
         
-        footer { 
-            text-align: center; padding: 2rem; 
-            background: var(--light-bg); border-top: 1px solid var(--border-color); 
-            color: #666; font-size: 0.9rem; 
+        /* Make text content stand out in a white card */
+        .content-card {
+            background: var(--card-bg); padding: 2.5rem; border-radius: 8px;
+            border-top: 5px solid var(--accent-color); box-shadow: 0 4px 6px rgba(0, 91, 150, 0.05);
+            margin-top: 1rem;
         }
+
+        footer { text-align: center; padding: 2rem; background: var(--primary-color); color: #B3E5FC; font-size: 0.9rem; margin-top: 3rem; }
     </style>
 </head>
 <body>
@@ -63,7 +55,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="project.html">Research Projects</a>
-            <a href="mission.html" style="color: var(--primary-color); font-weight: bold;">Mission</a>
+            <a href="mission.html" style="color: var(--accent-color); font-weight: bold;">Mission</a>
             <a href="index.html#focus">What I Do</a>
             <a href="index.html#publications">Publications</a>
             <a href="index.html#background">Background</a>
@@ -73,9 +65,12 @@
 
     <div class="container">
         <h2>Mission</h2>
-        <h3 style="font-size: 1.8rem; margin-top: 1rem; color: var(--text-color);">My mission: advancing coastal science through physics-based, open-source modelling.</h3>
-        <p style="margin-top: 1rem;">YourCompany is my independent practice, founded in 202X after many years at previous institutions. It is my vehicle for staying at the frontier of coastal modelling: collaborating with engineers, researchers and students worldwide, contributing to open-source model development, and working toward my long-held dream of simulating coastal evolution at a global scale.</p>
-        <p>Here you can write a much longer, detailed explanation of your mission, your vision for the future of coastal modelling, and why you started this practice.</p>
+        
+        <div class="content-card">
+            <h3 style="font-size: 1.8rem; margin-top: 0; color: var(--text-color);">My mission: advancing coastal science through physics-based, open-source modelling.</h3>
+            <p style="margin-top: 1rem;">YourCompany is my independent practice, founded in 202X after many years at previous institutions. It is my vehicle for staying at the frontier of coastal modelling: collaborating with engineers, researchers and students worldwide, contributing to open-source model development, and working toward my long-held dream of simulating coastal evolution at a global scale.</p>
+            <p>Here you can write a much longer, detailed explanation of your mission, your vision for the future of coastal modelling, and why you started this practice.</p>
+        </div>
     </div>
 
     <footer>
