@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gugum Gumbira - Coastal Modelling Specialist</title>
     <style>
+        /* --- Ocean Theme Colors --- */
         :root {
-            --primary-color: #004b87;
-            --text-color: #333333;
-            --bg-color: #ffffff;
-            --light-bg: #f4f7f9;
-            --border-color: #e1e8ed;
+            --primary-color: #005B96; /* Deep Ocean Blue */
+            --accent-color: #00A8E8;  /* Bright Ocean Blue */
+            --text-color: #1A2F4C;    /* Dark Navy for readability */
+            --bg-color: #F0F8FF;      /* Alice Blue */
+            --card-bg: #FFFFFF;       /* White for cards */
+            --border-color: #B3E5FC;  /* Light blue border */
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,52 +22,59 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
+            background-image: linear-gradient(180deg, #E1F5FE 0%, #F0F8FF 100%);
         }
 
-        h1, h2, h3, h4 { color: var(--primary-color); margin-bottom: 0.5em; font-weight: 600; }
+        h1, h2, h3, h4 { color: var(--primary-color); margin-bottom: 0.5em; font-weight: 700; }
         h1 { font-size: 2.5rem; line-height: 1.2; }
-        h2 { font-size: 1.8rem; margin-top: 2rem; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 0.2rem; }
+        h2 { font-size: 1.8rem; margin-top: 2rem; border-bottom: 3px solid var(--accent-color); display: inline-block; padding-bottom: 0.3rem; }
         h3 { font-size: 1.3rem; margin-top: 1.5rem; }
         p { margin-bottom: 1rem; }
         ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
         li { margin-bottom: 0.5rem; }
         a { color: var(--primary-color); text-decoration: none; transition: color 0.2s; }
-        a:hover { color: #002d52; text-decoration: underline; }
+        a:hover { color: var(--accent-color); text-decoration: underline; }
 
+        /* --- Layout & Navigation --- */
         header {
             position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid var(--border-color); z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 91, 150, 0.1);
+            border-bottom: 2px solid var(--accent-color); z-index: 100;
             padding: 1rem 0;
         }
-        nav { display: flex; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto; }
-        nav a { font-weight: 500; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: #555; }
+        nav { display: flex; justify-content: center; gap: 1.5rem; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+        nav a { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-color); }
+        nav a:hover { color: var(--accent-color); text-decoration: none; }
         
         .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
         section { margin-bottom: 4rem; scroll-margin-top: 80px; }
 
-        .hero { padding: 5rem 0 3rem 0; background-color: var(--light-bg); border-bottom: 1px solid var(--border-color); }
+        /* --- Hero Section --- */
+        .hero { padding: 5rem 0 3rem 0; background-color: var(--card-bg); border-bottom: 1px solid var(--border-color); }
         .hero-container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 3rem; }
         .hero-text { flex: 1; }
-        .hero-text h1 { font-size: 3.5rem; margin-bottom: 0; color: var(--text-color); }
-        .hero-text h2 { border: none; margin-top: 0; font-size: 1.5rem; color: #666; font-weight: 400; }
-        .avatar { width: 150px; height: 150px; border-radius: 50%; background-color: #ddd; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999; border: 4px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .hero-text h1 { font-size: 3.5rem; margin-bottom: 0; color: var(--primary-color); }
+        .hero-text h2 { border: none; margin-top: 0; font-size: 1.5rem; color: var(--text-color); font-weight: 400; }
+        .avatar { width: 150px; height: 150px; border-radius: 50%; background-color: #E1F5FE; border: 4px solid var(--accent-color); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary-color); box-shadow: 0 4px 10px rgba(0, 168, 232, 0.2); font-weight: bold; }
 
+        /* --- Components --- */
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; text-align: center; margin: 2rem 0; }
-        .stat-item h3 { font-size: 2.5rem; margin-bottom: 0; color: var(--primary-color); }
-        .stat-item p { color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-item h3 { font-size: 2.5rem; margin-bottom: 0; color: var(--accent-color); }
+        .stat-item p { color: var(--primary-color); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
-        .job { margin-bottom: 2rem; }
+        .job { margin-bottom: 2rem; background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
         .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.5rem; }
-        .job-title { font-size: 1.2rem; font-weight: 600; color: var(--text-color); }
-        .job-date { font-weight: 500; color: #666; font-family: monospace; }
-        .job-company { font-weight: 500; color: #555; margin-bottom: 0.5rem; }
+        .job-title { font-size: 1.2rem; font-weight: 700; color: var(--primary-color); }
+        .job-date { font-weight: 600; color: var(--accent-color); font-family: monospace; }
+        .job-company { font-weight: 500; color: var(--text-color); margin-bottom: 0.5rem; }
 
         .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: var(--light-bg); border: 1px solid var(--border-color); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; color: #555; }
+        .tag { background: #E1F5FE; border: 1px solid #B3E5FC; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.85rem; color: var(--primary-color); font-weight: 600; }
 
-        .pub-list p { margin-bottom: 1rem; font-size: 0.95rem; }
+        .pub-list p { margin-bottom: 1rem; font-size: 0.95rem; background: var(--card-bg); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); }
         
-        footer { text-align: center; padding: 2rem; background: var(--light-bg); border-top: 1px solid var(--border-color); color: #666; font-size: 0.9rem; }
+        footer { text-align: center; padding: 2rem; background: var(--primary-color); border-top: 1px solid var(--border-color); color: #B3E5FC; font-size: 0.9rem; }
+        footer a { color: #ffffff; }
     </style>
 </head>
 <body>
@@ -88,24 +97,22 @@
             <div class="hero-text">
                 <h2>Gugum Gumbira</h2>
                 <h1>Coastal Modelling & Morphodynamics Specialist</h1>
-                <p style="margin-top: 1rem; font-size: 1.1rem; color: #555;">Founder — YourCompany · Your City, Country</p>
+                <p style="margin-top: 1rem; font-size: 1.1rem; color: var(--text-color);">Founder — YourCompany · Your City, Country</p>
             </div>
         </div>
     </section>
 
     <div class="container">
         
-        <!-- Mission section is completely removed here -->
-
-        <section id="focus" style="background: var(--light-bg); padding: 2rem; border-radius: 8px;">
+        <section id="focus" style="background: var(--card-bg); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--accent-color); box-shadow: 0 4px 6px rgba(0, 91, 150, 0.05);">
             <h2 style="border:none; margin-top:0;">What I do</h2>
             <h3 style="margin-top: 0.5rem;">Four areas of focus</h3>
             <p>Where my work concentrates its energy.</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
                 <div>
-                    <h4 style="color: var(--text-color);">Model development & validation</h4>
-                    <p style="font-size: 0.9rem;">Developing and validating components and functionalities of coastal simulation models, and the interactions between them.</p>
+                    <h4 style="color: var(--primary-color);">Model development & validation</h4>
+                    <p style="font-size: 0.95rem;">Developing and validating components and functionalities of coastal simulation models, and the interactions between them.</p>
                     <div class="tags">
                         <span class="tag">ShorelineS</span>
                         <span class="tag">SnapWave</span>
@@ -114,17 +121,27 @@
                     </div>
                 </div>
                 <div>
-                    <h4 style="color: var(--text-color);">Specialized courses & expert advice</h4>
-                    <p style="font-size: 0.9rem;">Giving specialized courses in coastal modelling and offering expert advice to partners, consultancies and public-sector clients anywhere in the world.</p>
+                    <h4 style="color: var(--primary-color);">Specialized courses & expert advice</h4>
+                    <p style="font-size: 0.95rem;">Giving specialized courses in coastal modelling and offering expert advice to partners, consultancies and public-sector clients anywhere in the world.</p>
                 </div>
                 <div>
-                    <h4 style="color: var(--text-color);">Student support & supervision</h4>
-                    <p style="font-size: 0.9rem;">Supporting students interested in coastal modelling with advice, guidance and supervision — from MSc to PhD level.</p>
+                    <h4 style="color: var(--primary-color);">Student support & supervision</h4>
+                    <p style="font-size: 0.95rem;">Supporting students interested in coastal modelling with advice, guidance and supervision — from MSc to PhD level.</p>
                 </div>
                 <div>
-                    <h4 style="color: var(--text-color);">Global coastal evolution modelling</h4>
-                    <p style="font-size: 0.9rem;">Working towards a long-held dream: simulating coastal evolution on a global scale, bringing together decades of model development into a unified planetary view.</p>
+                    <h4 style="color: var(--primary-color);">Global coastal evolution modelling</h4>
+                    <p style="font-size: 0.95rem;">Working towards a long-held dream: simulating coastal evolution on a global scale, bringing together decades of model development into a unified planetary view.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <div class="pub-list" style="margin-top: 1.5rem;">
+                <p>G Gumbira, M Van Ormondt, J Reyns, M Van Der Lugt (2025). <strong>SnapWave: fast, implicit wave transformation from offshore to nearshore.</strong> Geoscientific Model Development 18(23), 9469–9495.</p>
+                <p>J Reyns, B Jagers, R Ranasinghe, H Kernkamp, G Gumbira (2025). <strong>A three-dimensional process-based morphodynamic model on orthogonal unstructured grids.</strong> Coastal Engineering, 104915.</p>
+                <p>G Gumbira, B Huisman, A Elghandour, M Ghonim, J Reyns (2020). <strong>Efficient modeling of complex sandy coastal evolution at monthly to century time scales.</strong> Frontiers in Marine Science 7, 535.</p>
+                <p>G Gumbira, S Costas (2019). <strong>Coupling nearshore and aeolian processes: XBeach and Duna process-based models.</strong> Environmental Modelling & Software 115, 98–112.</p>
             </div>
         </section>
 
@@ -151,7 +168,7 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 3rem;">Professional Experience</h3>
+            <h3 style="margin-top: 3rem; color: var(--primary-color);">Professional Experience</h3>
             
             <div class="job">
                 <div class="job-header">
@@ -193,7 +210,7 @@
                 </ul>
             </div>
 
-            <h3 style="margin-top: 2rem;">Key Qualifications</h3>
+            <h3 style="margin-top: 2rem; color: var(--primary-color);">Key Qualifications</h3>
             <div class="tags">
                 <span class="tag">Coastal hydrodynamics & morphodynamics</span>
                 <span class="tag">Wave–current–sediment interaction</span>
@@ -202,16 +219,6 @@
                 <span class="tag">Long-term shoreline evolution</span>
                 <span class="tag">Nature-based solutions</span>
                 <span class="tag">Model validation</span>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            <div class="pub-list" style="margin-top: 1.5rem;">
-                <p>G Gumbira, M Van Ormondt, J Reyns, M Van Der Lugt (2025). <strong>SnapWave: fast, implicit wave transformation from offshore to nearshore.</strong> Geoscientific Model Development 18(23), 9469–9495.</p>
-                <p>J Reyns, B Jagers, R Ranasinghe, H Kernkamp, G Gumbira (2025). <strong>A three-dimensional process-based morphodynamic model on orthogonal unstructured grids.</strong> Coastal Engineering, 104915.</p>
-                <p>G Gumbira, B Huisman, A Elghandour, M Ghonim, J Reyns (2020). <strong>Efficient modeling of complex sandy coastal evolution at monthly to century time scales.</strong> Frontiers in Marine Science 7, 535.</p>
-                <p>G Gumbira, S Costas (2019). <strong>Coupling nearshore and aeolian processes: XBeach and Duna process-based models.</strong> Environmental Modelling & Software 115, 98–112.</p>
             </div>
         </section>
 
