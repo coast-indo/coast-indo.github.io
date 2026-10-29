@@ -103,8 +103,6 @@
         <!-- Mission -->
         <section id="mission">
             <h2>Mission</h2>
-            <h3 style="font-size: 1.8rem; margin-top: 1rem; color: var(--text-color);">My mission: advancing coastal science through physics-based, open-source modelling.</h3>
-            <p style="margin-top: 1rem;">YourCompany is my independent practice, founded in 202X after many years at previous institutions. It is my vehicle for staying at the frontier of coastal modelling: collaborating with engineers, researchers and students worldwide, contributing to open-source model development, and working toward my long-held dream of simulating coastal evolution at a global scale.</p>
         </section>
 
         <!-- What I Do -->
@@ -239,13 +237,17 @@
     </footer>
 
     <!-- Smooth Scrolling Script -->
+        <!-- Updated Smooth Scrolling Script -->
     <script>
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                // Only run smooth scroll if the link starts with a '#'
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
