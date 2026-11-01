@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Coastal Evolution - Gugum Gumbira</title>
+    <style>
+        :root { --primary-color: #005B96; --accent-color: #00A8E8; --text-color: #1A2F4C; --bg-color: #F0F8FF; --card-bg: #FFFFFF; --border-color: #B3E5FC; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-color); background-image: linear-gradient(180deg, #E1F5FE 0%, #F0F8FF 100%); }
+        h1, h2, h3 { color: var(--primary-color); margin-bottom: 0.5em; font-weight: 700; }
+        h1 { font-size: 2.5rem; margin-top: 1rem; }
+        h2 { font-size: 1.5rem; margin-top: 2rem; border-bottom: 3px solid var(--accent-color); display: inline-block; padding-bottom: 0.3rem; }
+        p { margin-bottom: 1rem; }
+        
+        header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0, 91, 150, 0.1); border-bottom: 2px solid var(--accent-color); z-index: 100; padding: 1rem 0; }
+        nav { display: flex; justify-content: center; gap: 1.5rem; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+        nav a { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-color); text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; min-height: 70vh; }
+        
+        .content-card { background: var(--card-bg); padding: 3rem; border-radius: 8px; border-top: 5px solid var(--accent-color); box-shadow: 0 4px 6px rgba(0, 91, 150, 0.05); margin-top: 2rem; }
+        
+        .back-btn { display: inline-block; margin-bottom: 2rem; color: var(--accent-color); text-decoration: none; font-weight: 700; }
+        .back-btn:hover { color: var(--primary-color); }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; margin-bottom: 2rem; }
+        .tag { background: #E1F5FE; color: var(--primary-color); border: 1px solid #B3E5FC; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+
+        footer { text-align: center; padding: 2rem; background: var(--primary-color); color: #B3E5FC; font-size: 0.9rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="project.html" style="color: var(--accent-color); font-weight: bold;">Research Projects</a>
+            <a href="mission.html">Mission</a>
+            <a href="index.html#focus">What I Do</a>
+            <a href="index.html#publications">Publications</a>
+            <a href="index.html#background">Background</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="project.html" class="back-btn">&larr; Back to all Projects</a>
+        
+        <div class="content-card">
+            <h1>Global Coastal Evolution Modelling</h1>
+            
+            <div class="tags">
+                <span class="tag">ShorelineS</span>
+                <span class="tag">Climate Change</span>
+                <span class="tag">Global Scale</span>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>This project aims to develop a unified planetary view of coastal evolution. By coupling long-term shoreline models with global climate and sea-level rise data, we are working toward simulating how coastlines will change over the next century.</p>
+            
+            <h2>Methodology</h2>
+            <p>Here you can write about the specific models used, the data sources, and the mathematical approach. You can add images, charts, or code snippets to this section.</p>
+
+            <h2>Key Findings / Impact</h2>
+            <p>Describe the results of the research. Why is this project important? Who does it help? You can list the outcomes here.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Gugum Gumbira. All rights reserved.</p>
+    </footer>
+</body>
+</html>
